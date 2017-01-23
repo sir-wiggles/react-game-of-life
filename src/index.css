@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-align: center;
+  font-family: "Josefin Sans";
+  background: radial-gradient(#3e7288, black);
+  height: 100vh; }
+
+.button {
+  display: inline-block;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background: #06accc;
+  border-radius: 50%;
+  box-shadow: 0px 3px 3px grey, inset 0 0 2px #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px; }
+
+#generation {
+  margin: 10px auto;
+  padding: 5px 10px;
+  box-shadow: inset 1px 1px 3px;
+  width: 200px;
+  background: #06accc;
+  border-radius: 5px; }
+  #generation #count {
+    text-align: right;
+    width: 50px; }
+
+span#factor {
+  text-align: center;
+  height: 20px;
+  width: 30px;
+  background: yellow;
+  position: absolute;
+  opacity: 1;
+  line-height: 20px;
+  border-radius: 1px 10px 10px 1px;
+  top: 15px;
+  right: -16px;
+  opacity: .9; }
+
+.input {
+  display: inline-block;
+  margin: 10px; }
+  .input label {
+    padding-right: 5px; }
+
+.cells {
+  display: inline-block;
+  background: #5d5c53; }
+
+.row {
+  font-size: 0px; }
+
+.row:not(:last-child) {
+  margin-bottom: 1px; }
+
+.cell {
+  height: 13px;
+  width: 13px;
+  background: #111111;
+  display: inline-block;
+  border-radius: 3px; }
+
+.cell:not(:last-child) {
+  margin-right: 1px; }
+
+.alive {
+  background: #69b100; }
+
+.dead {
+  background: #424242; }
+
+.ps-top-to-bottom {
+  position: relative;
+  border-top: 3px solid red; }
+
+.ps-top-to-bottom:before, .ps-top-to-bottom:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(red), to(transparent));
+  background-image: -webkit-linear-gradient(red, transparent);
+  background-image: -moz-linear-gradient(red, transparent);
+  background-image: -o-linear-gradient(red, transparent);
+  background-image: linear-gradient(red, transparent);
+  top: -3px;
+  bottom: -3px;
+  width: 3px; }
+
+.ps-top-to-bottom:before {
+  left: -3px; }
+
+.ps-top-to-bottom:after {
+  right: -3px; }
+
+/*# sourceMappingURL=index.css.map */

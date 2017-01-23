@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+$button-color: #06accc;
+$cell-color: #111111;
+$alive-color: #69b100;
+$dead-color: #424242;
+$background: #3e7288;
+$grad-color: red;
+
+html {
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-align: center;
+    font-family: "Josefin Sans";
+    background: radial-gradient($background, black);
+    height: 100vh;
+}
+
+.button {
+    display: inline-block;
+    //padding: 5px 10px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    background: $button-color;
+    border-radius: 50%;
+    box-shadow: 0px 3px 3px grey, inset 0 0 2px #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+
+#generation {
+    margin: 10px auto;
+    padding: 5px 10px;
+    box-shadow: inset 1px 1px 3px;
+    width: 200px;
+    background: $button-color;
+    border-radius: 5px;
+
+
+    #count {
+        text-align: right;
+        width: 50px;
+    }
+}
+
+span#factor {
+    text-align: center;
+    height: 20px;
+    width: 30px;
+    background: yellow;
+    position: absolute;
+    opacity: 1;
+    line-height: 20px;
+    border-radius: 1px 10px 10px 1px;
+    top: 15px;
+    right: -16px;
+    opacity: .9;
+}
+
+.input {
+    display: inline-block;
+    margin: 10px;
+
+    label {
+        padding-right: 5px;
+    }
+}
+
+
+.cells{
+    display: inline-block;
+    background: #5d5c53;
+}
+
+.row {
+    font-size: 0px;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 1px;
+}
+
+.cell {
+    height: 13px;
+    width: 13px;
+    background: $cell-color;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.cell:not(:last-child) {
+    margin-right: 1px;
+}
+
+.alive {
+    background: $alive-color;
+}
+
+.dead {
+    background: $dead-color;
+}
+
+.ps-top-to-bottom {
+  position: relative;
+  border-top: 3px solid $grad-color;
+}
+.ps-top-to-bottom:before, .ps-top-to-bottom:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($grad-color), to(transparent));
+  background-image: -webkit-linear-gradient($grad-color, transparent);
+  background-image: -moz-linear-gradient($grad-color, transparent);
+  background-image: -o-linear-gradient($grad-color, transparent);
+  background-image: linear-gradient($grad-color, transparent);
+  top: -3px;
+  bottom: -3px;
+  width: 3px;
+}
+.ps-top-to-bottom:before {
+  left: -3px;
+}
+.ps-top-to-bottom:after {
+  right: -3px;
+}
